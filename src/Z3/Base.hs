@@ -2602,7 +2602,7 @@ data Logic
     -- ^ Closed formulas over the theory of linear integer arithmetic
     -- and arrays extended with free sort and function symbols but
     -- restricted to arrays with integer indices and values.
-
+  | UFBV
   | AUFLIRA
     -- ^ Closed linear formulas with free sort and function symbols over
     -- one- and two-dimentional arrays of integer index and real
@@ -2718,6 +2718,7 @@ instance Show Logic where
   show QF_UFNRA  = "QF_UFNRA"
   show UFLRA     = "UFLRA"
   show UFNIA     = "UFNIA"
+  show UFBV      = "UFBV"
 
 mkSolver :: Context -> IO Solver
 mkSolver = liftFun0 z3_mk_solver
